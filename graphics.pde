@@ -1,3 +1,0 @@
-void drawGraphics(){
-  //ej klar
-}
