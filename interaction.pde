@@ -1,34 +1,27 @@
 
-
+// the boolean that controls the pictures
 Boolean loopedLetter () {
-  String asd = "hejsan"; //utbytes till metod för slumpat ord
   boolean hej; 
   hej = true;
-  asd = asd.toLowerCase();
-  for (int i =0; i<asd.length()-1; i++){
-    char c = asd.charAt(i);
+  for (int i =0; i<theChosenOne.length()-1; i++){
+    char c = theChosenOne.charAt(i);
     if (c == pressedKey){
-      hej = false;
-      
-    }
-    
+      hej = false;  
+    }    
   } 
-  return(hej);
+  return(hej); 
+}
+
+//draws the lines
+void drawLine(int posx, int posy){
+  fill(255);
+  text("_", posx, posy);
+}
+
+//draws the right letters
+void drawLetters(char c, int posx, int posy){
+  fill(255);
+  text(c, posx, posy);
   
 }
-Boolean loopedLetters () {
-  String asd = "hejsan"; //utbytes till metod för slumpat ord
-  boolean hej; 
-  hej = false;
-  asd = asd.toLowerCase();
-  for (int i =0; i<asd.length()-1; i++){
-    char c = asd.charAt(i);
-    if (c == pressedKey){
-      hej = true;
-      
-    }
-    
-  } 
-  return(hej);
-  
-}
+

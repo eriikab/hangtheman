@@ -4,9 +4,11 @@ ArrayList<String> getAllWords(String URL){
   String[] s = loadStrings(URL);
 
   for (int i = 0; i < s.length; i++){
-      String[] textFileWords = (s[i].split(" "));
+    
+    // devides text into words
+    String[] textFileWords = (s[i].split(" "));
   
-      for(int j=0; j<textFileWords.length; j++){
+    for(int j=0; j<textFileWords.length; j++){
       String word = textFileWords[j];
       word = word.toLowerCase();
       word = word.replace(".","");//replaces special characters of choice with ""
@@ -25,7 +27,7 @@ ArrayList<String> getAllWords(String URL){
   }
 //println(hangmanWords);
     return (hangmanWords);
-  }
+}
 
 
 
@@ -36,18 +38,18 @@ ArrayList<String> getAllWords(String URL){
 
 //FIX THIS INTO WORKING!
 /*
-  String getWord(theWords){
+  String getWord(ArrayList <String> theWords){
 
-  //hmmmmmmmmmmmmmmmmmmmm
+
   
  
   int index = int(random(theWords.size())); 
   println(index);
   println(theWords.get(index));  
   
-  getWord = theWords.get(index);
+  String snopp = theWords.get(index);
   
-  return getWord();
+  return snopp();
   
 }
 */
